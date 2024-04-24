@@ -1,0 +1,32 @@
+<div class="py-3 px-3 bg-white rounded-md min-w-[20vw]">
+  <ul class="flex flex-col text-[13px] text-gray-600">
+    <li class="py-2 px-2 flex items-center">Dashboard</li>
+
+    <li
+      class="bg-blue-400 bg-opacity-10 py-2 px-2 rounded-sm flex justify-between items-center"
+    >
+      Products
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        class="main-grid-item-icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        class="text-black-300"
+      >
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </li>
+  </ul>
+
+  <div class="mt-10">
+    <h3 class="font-bold text-[1.3rem]">Filter by</h3>
+    <app-filter-by-budget></app-filter-by-budget>
+    <app-filter-by-rating></app-filter-by-rating>
+  </div>
+</div>
