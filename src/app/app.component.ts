@@ -3,6 +3,8 @@ import { RouterOutlet } from "@angular/router";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { SidebarFiltersComponent } from "./products-sidebar/sidebar-filters.component";
 import { ProductPostComponent } from "./product-post/product-post.component";
+import { ProductTabsComponent } from "./product-tabs/product-tabs.component";
+import { ProductFilterComponent } from "./product-filter/product-filter.component";
 
 @Component({
   selector: "app-root",
@@ -12,6 +14,8 @@ import { ProductPostComponent } from "./product-post/product-post.component";
     NavbarComponent,
     SidebarFiltersComponent,
     ProductPostComponent,
+    ProductTabsComponent,
+    ProductFilterComponent,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
