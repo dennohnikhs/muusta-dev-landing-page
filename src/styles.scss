@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .wrapper {
-  max-width: auto;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  max-width: 1200px;
+  margin-left: 0rem;
+  margin-right: 0rem;
 
   @media only screen and (max-width: 1200px) {
     & {

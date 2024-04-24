@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { NavbarComponent } from "./navbar/navbar.component";
-import { ProductCategoriesComponent } from "./product-categories/product-categories.component";
 import { SidebarFiltersComponent } from "./products-sidebar/sidebar-filters.component";
 import { ProductPostComponent } from "./product-post/product-post.component";
 
@@ -11,7 +10,6 @@ import { ProductPostComponent } from "./product-post/product-post.component";
   imports: [
     RouterOutlet,
     NavbarComponent,
-    ProductCategoriesComponent,
     SidebarFiltersComponent,
     ProductPostComponent,
   ],
