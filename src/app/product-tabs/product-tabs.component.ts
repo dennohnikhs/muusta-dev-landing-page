@@ -1,10 +1,15 @@
 import { Component } from "@angular/core";
 import { ProductFilterComponent } from "../product-filter/product-filter.component";
-import { ProductInventoryComponent } from "../product-inventory/product-inventory.component";
+import { ProductInventoryComponent } from "../product-inventory-header/product-inventory.component";
+import { ProductInventoryInfoComponent } from "../product-inventory-info/product-inventory-info.component";
 @Component({
   selector: "app-product-tabs",
   standalone: true,
-  imports: [ProductFilterComponent, ProductInventoryComponent],
+  imports: [
+    ProductFilterComponent,
+    ProductInventoryComponent,
+    ProductInventoryInfoComponent,
+  ],
   templateUrl: "./product-tabs.component.html",
   styleUrl: "./product-tabs.component.scss",
 })
