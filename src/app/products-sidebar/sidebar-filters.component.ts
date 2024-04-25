@@ -1,10 +1,17 @@
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-sidebar-filters",
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: "./sidebar-filters.component.html",
   styleUrl: "./sidebar-filters.component.scss",
 })
-export class SidebarFiltersComponent {}
+export class SidebarFiltersComponent {
+  isDropdownOpen: boolean = false;
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+}

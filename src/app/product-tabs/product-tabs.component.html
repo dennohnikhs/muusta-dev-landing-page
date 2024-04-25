@@ -26,15 +26,21 @@
   <div
     class="tabs flex justify-start cursor-pointer gap-5 text-gray-500 border-b mb-7"
   >
-    <h1 (click)="setTab('overview')" [class.border-b]="isTabActive('overview')">
+    <h1
+      (click)="setTab('overview')"
+      [ngClass]="{ 'active-tab': isTabActive('overview') }"
+    >
       Overview
     </h1>
-    <h1 (click)="setTab('reports')" [class.border-b]="isTabActive('reports')">
+    <h1
+      (click)="setTab('reports')"
+      [ngClass]="{ 'active-tab': isTabActive('reports') }"
+    >
       Reports
     </h1>
     <h1
       (click)="setTab('inventory')"
-      [class.border-b]="isTabActive('inventory')"
+      [ngClass]="{ 'active-tab': isTabActive('inventory') }"
     >
       Inventory
     </h1>
@@ -42,14 +48,18 @@
   <div>
     <app-product-filter></app-product-filter>
   </div>
-  <div *ngIf="isTabActive('overview')">Content of Overview</div>
-  <div *ngIf="isTabActive('reports')">Content of Reports</div>
-  <div *ngIf="isTabActive('inventory')">
+  <div *ngIf="isTabActive('overview')">
     <app-product-inventory></app-product-inventory>
     <app-product-inventory-info></app-product-inventory-info>
     <app-product-inventory-info></app-product-inventory-info>
     <app-product-inventory-info></app-product-inventory-info>
     <app-product-inventory-info></app-product-inventory-info>
     <app-product-inventory-info></app-product-inventory-info>
+  </div>
+  <div *ngIf="isTabActive('reports')" class="text-center py-5">
+    product Report content
+  </div>
+  <div *ngIf="isTabActive('inventory')" class="text-center py-5">
+    product inventory content
   </div>
 </div>
