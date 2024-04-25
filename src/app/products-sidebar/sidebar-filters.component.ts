@@ -9,9 +9,5 @@ import { CommonModule } from "@angular/common";
   styleUrl: "./sidebar-filters.component.scss",
 })
 export class SidebarFiltersComponent {
-  isDropdownOpen: boolean = false;
-
-  toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen;
-  }
+  showDropdownLinks = false;
 }
