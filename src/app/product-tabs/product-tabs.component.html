@@ -1,16 +1,62 @@
-<div class="">
+<!-- <div class="">
   <div class="tabs-container">
-    <div class="tabs flex justify-start gap-5 text-gray-500 border-b mb-7">
-      <a>Overview</a>
-      <a>Reports</a>
-      <a class="border-b border-blue-500">Inventory</a>
+    <div
+      class="tabs flex justify-start cursor-pointer gap-5 text-gray-500 border-b mb-7"
+    >
+      <h1>Overview</h1>
+      <h1>Reports</h1>
+      <h1 class="border-b border-blue-500">Inventory</h1>
     </div>
     <app-product-filter></app-product-filter>
-    <app-product-inventory></app-product-inventory>
+    <app-product-inventory></app-product-inventory> -->
 
-    <!-- <div class="opacity-0">Content of Overview</div>
+<!-- <div class="opacity-0">Content of Overview</div>
     <div class="opacity-0">Content of Reports</div> -->
-    <div>
+<!-- <div>
+      <app-product-inventory-info></app-product-inventory-info>
+      <app-product-inventory-info></app-product-inventory-info>
+      <app-product-inventory-info></app-product-inventory-info>
+      <app-product-inventory-info></app-product-inventory-info>
+      <app-product-inventory-info></app-product-inventory-info>
+      <app-product-inventory-info></app-product-inventory-info>
+    </div>
+  </div>
+</div> -->
+<div ng-app="myApp" ng-controller="TabController as tabCtrl">
+  <div class="tabs-container">
+    <div
+      class="tabs flex justify-start cursor-pointer gap-5 text-gray-500 border-b mb-7"
+    >
+      <h1
+        ng-click="tabCtrl.setTab('overview')"
+        ng-class="{
+          'border-b border-blue-500': tabCtrl.isTabActive('overview')
+        }"
+      >
+        Overview
+      </h1>
+      <h1
+        ng-click="tabCtrl.setTab('reports')"
+        ng-class="{
+          'border-b border-blue-500': tabCtrl.isTabActive('reports')
+        }"
+      >
+        Reports
+      </h1>
+      <h1
+        ng-click="tabCtrl.setTab('inventory')"
+        ng-class="{
+          'border-b border-blue-500': tabCtrl.isTabActive('inventory')
+        }"
+      >
+        Inventory
+      </h1>
+    </div>
+    <div ng-show="tabCtrl.isTabActive('overview')">Content of Overview</div>
+    <div ng-show="tabCtrl.isTabActive('reports')">Content of Reports</div>
+    <div ng-show="tabCtrl.isTabActive('inventory')">
+      <app-product-filter></app-product-filter>
+      <app-product-inventory></app-product-inventory>
       <app-product-inventory-info></app-product-inventory-info>
       <app-product-inventory-info></app-product-inventory-info>
       <app-product-inventory-info></app-product-inventory-info>

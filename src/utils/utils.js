@@ -1,6 +1,11 @@
 angular.module("myApp", []).controller("TabController", function () {
-  this.showDetails = false;
-  this.toggleDetails = function () {
-    this.showDetails = !this.showDetails;
+  this.activeTab = "overview";
+
+  this.setTab = function (tabName) {
+    this.activeTab = tabName;
+  };
+
+  this.isTabActive = function (tabName) {
+    return this.activeTab === tabName;
   };
 });

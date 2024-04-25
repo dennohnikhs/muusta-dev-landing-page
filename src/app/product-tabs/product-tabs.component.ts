@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { ProductFilterComponent } from "../product-filter/product-filter.component";
 import { ProductInventoryComponent } from "../product-inventory-header/product-inventory.component";
 import { ProductInventoryInfoComponent } from "../product-inventory-info/product-inventory-info.component";
+
 @Component({
   selector: "app-product-tabs",
   standalone: true,
@@ -13,4 +14,14 @@ import { ProductInventoryInfoComponent } from "../product-inventory-info/product
   templateUrl: "./product-tabs.component.html",
   styleUrl: "./product-tabs.component.scss",
 })
-export class ProductTabsComponent {}
+export class ProductTabsComponent {
+  activeTab: string = "overview";
+
+  setTab(tabName: string) {
+    this.activeTab = tabName;
+  }
+
+  isTabActive(tabName: string) {
+    return this.activeTab === tabName;
+  }
+}
