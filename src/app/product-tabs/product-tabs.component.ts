@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { ProductFilterComponent } from "../product-filter/product-filter.component";
 import { ProductInventoryComponent } from "../product-inventory-header/product-inventory.component";
 import { ProductInventoryInfoComponent } from "../product-inventory-info/product-inventory-info.component";
@@ -10,6 +11,7 @@ import { ProductInventoryInfoComponent } from "../product-inventory-info/product
     ProductFilterComponent,
     ProductInventoryComponent,
     ProductInventoryInfoComponent,
+    CommonModule,
   ],
   templateUrl: "./product-tabs.component.html",
   styleUrl: "./product-tabs.component.scss",

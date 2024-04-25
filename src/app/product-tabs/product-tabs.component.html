@@ -22,47 +22,34 @@
     </div>
   </div>
 </div> -->
-<div ng-app="myApp" ng-controller="TabController as tabCtrl">
-  <div class="tabs-container">
-    <div
-      class="tabs flex justify-start cursor-pointer gap-5 text-gray-500 border-b mb-7"
+<div>
+  <div
+    class="tabs flex justify-start cursor-pointer gap-5 text-gray-500 border-b mb-7"
+  >
+    <h1 (click)="setTab('overview')" [class.border-b]="isTabActive('overview')">
+      Overview
+    </h1>
+    <h1 (click)="setTab('reports')" [class.border-b]="isTabActive('reports')">
+      Reports
+    </h1>
+    <h1
+      (click)="setTab('inventory')"
+      [class.border-b]="isTabActive('inventory')"
     >
-      <h1
-        ng-click="tabCtrl.setTab('overview')"
-        ng-class="{
-          'border-b border-blue-500': tabCtrl.isTabActive('overview')
-        }"
-      >
-        Overview
-      </h1>
-      <h1
-        ng-click="tabCtrl.setTab('reports')"
-        ng-class="{
-          'border-b border-blue-500': tabCtrl.isTabActive('reports')
-        }"
-      >
-        Reports
-      </h1>
-      <h1
-        ng-click="tabCtrl.setTab('inventory')"
-        ng-class="{
-          'border-b border-blue-500': tabCtrl.isTabActive('inventory')
-        }"
-      >
-        Inventory
-      </h1>
-    </div>
-    <div ng-show="tabCtrl.isTabActive('overview')">Content of Overview</div>
-    <div ng-show="tabCtrl.isTabActive('reports')">Content of Reports</div>
-    <div ng-show="tabCtrl.isTabActive('inventory')">
-      <app-product-filter></app-product-filter>
-      <app-product-inventory></app-product-inventory>
-      <app-product-inventory-info></app-product-inventory-info>
-      <app-product-inventory-info></app-product-inventory-info>
-      <app-product-inventory-info></app-product-inventory-info>
-      <app-product-inventory-info></app-product-inventory-info>
-      <app-product-inventory-info></app-product-inventory-info>
-      <app-product-inventory-info></app-product-inventory-info>
-    </div>
+      Inventory
+    </h1>
+  </div>
+  <div>
+    <app-product-filter></app-product-filter>
+  </div>
+  <div *ngIf="isTabActive('overview')">Content of Overview</div>
+  <div *ngIf="isTabActive('reports')">Content of Reports</div>
+  <div *ngIf="isTabActive('inventory')">
+    <app-product-inventory></app-product-inventory>
+    <app-product-inventory-info></app-product-inventory-info>
+    <app-product-inventory-info></app-product-inventory-info>
+    <app-product-inventory-info></app-product-inventory-info>
+    <app-product-inventory-info></app-product-inventory-info>
+    <app-product-inventory-info></app-product-inventory-info>
   </div>
 </div>
