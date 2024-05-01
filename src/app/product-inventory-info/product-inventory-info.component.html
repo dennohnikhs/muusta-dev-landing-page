@@ -2,15 +2,23 @@
   <ul class="border-b py-4 grid grid-cols-6">
     <li class="flex flex-row items-center gap-2">
       <input type="checkbox" />
-      <div class="cursor-pointer">
+      <div
+        class="cursor-pointer"
+        ng-mouseover="showModal('https://placebear.com/640/360')"
+        ng-mouseleave="hideModal()"
+      >
         <img
           src="https://placebear.com/640/360"
           alt="product-avatar "
-          class="h-[20px] w-[20px] inline-block"
+          class="h-[20px] w-[20px] inline-block relative"
         />
+        <div class="absolute">
+          <app-products-details-modal></app-products-details-modal>
+        </div>
       </div>
       <h1>Iphone 6 Plus</h1>
     </li>
+
     <li>356746456hhd</li>
     <li class="">2/19/21</li>
     <li>$500.00</li>
